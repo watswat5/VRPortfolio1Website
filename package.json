@@ -1,0 +1,7 @@
+{
+  "name": "vr-portfolio-website",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "4.145.0"
+  }
+}
