@@ -8,6 +8,8 @@ const TYPES = {
   '.symbols.json': 'application/octet-stream',
 };
 const ENCODINGS = { '.br': 'br', '.gz': 'gzip' };
+// Bump to force browsers (and Unity's IndexedDB cache) to drop stored copies.
+const CACHE_VERSION = 'enc2';
 
 export default {
   async fetch(request, env) {
