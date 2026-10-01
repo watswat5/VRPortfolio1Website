@@ -2,7 +2,10 @@ node_modules
 node_modules/**
 .git
 .git/**
+.wrangler
+.wrangler/**
 package.json
 package-lock.json
 wrangler.jsonc
+worker.js
 README.md

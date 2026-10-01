@@ -1,11 +1,2 @@
-/demo1/Build/alpha.data.br
-  Content-Encoding: br
-  Content-Type: application/octet-stream
-
-/demo1/Build/alpha.framework.js.br
-  Content-Encoding: br
-  Content-Type: application/javascript
-
-/demo1/Build/alpha.wasm.br
-  Content-Encoding: br
-  Content-Type: application/wasm
+# Content-Encoding for Unity's .br/.gz build files is set in worker.js;
+# Cloudflare does not apply that header from this file.

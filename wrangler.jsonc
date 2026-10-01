@@ -1,8 +1,12 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "portfolio1",
+  "main": "worker.js",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    // Only Unity build requests go through worker.js; everything else is served directly.
+    "run_worker_first": ["/*/Build/*", "/*/*/Build/*"]
   }
 }
