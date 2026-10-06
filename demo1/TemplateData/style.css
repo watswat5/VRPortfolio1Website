@@ -1,33 +1,16 @@
-@import url("../../styles.css");
-
-.player-page { min-height: 100vh; display: flex; flex-direction: column; }
-.player-main { width: 100%; padding-block: 54px 72px; }
-.player-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 28px; }
-.player-heading h1 { font-size: clamp(42px, 6vw, 66px); margin-bottom: 0; }
-.player-heading p:last-child { color: var(--muted); font-size: 14px; max-width: 390px; margin: 0 0 7px; }
-#unity-container { position: relative; width: 100%; background: var(--navy); border: 1px solid var(--navy); }
-#unity-canvas { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; background: #101c24; }
-#unity-loading-bar { position: absolute; left: 50%; top: 50%; width: min(280px, 70%); transform: translate(-50%, -50%); color: white; text-align: center; }
-#unity-loading-bar p { margin: 0 0 14px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
-#unity-progress-bar-empty { height: 6px; background: rgba(255, 255, 255, .2); }
-#unity-progress-bar-full { width: 0; height: 100%; background: #d6e6bb; }
-#unity-warning { position: absolute; top: 18px; left: 50%; z-index: 2; width: min(680px, calc(100% - 36px)); transform: translateX(-50%); display: none; }
-#unity-warning div { padding: 12px 16px; margin-bottom: 8px; background: white; color: var(--ink); font-size: 13px; }
-#unity-warning .error { border-left: 5px solid #b33124; }
-#unity-warning .warning { border-left: 5px solid var(--accent); }
-#unity-footer { min-height: 58px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 10px 14px 10px 20px; color: #c1d0d5; }
-#unity-build-title { font-size: 11px; letter-spacing: 1.3px; text-transform: uppercase; }
-#unity-fullscreen-button { border: 1px solid #bfcfd2; background: transparent; color: white; padding: 9px 12px; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
-#unity-fullscreen-button:hover, #unity-fullscreen-button:focus-visible { background: white; color: var(--navy); }
-.player-help { color: var(--muted); font-size: 12px; margin: 14px 0 0; }
-.player-page > .footer { margin-top: auto; }
-.unity-mobile { position: fixed !important; inset: 0; z-index: 20; width: 100% !important; height: 100% !important; border: 0 !important; }
-.unity-mobile #unity-canvas, #unity-canvas.unity-mobile { width: 100%; height: 100%; }
-.unity-mobile #unity-footer { display: none; }
-
-@media (max-width: 640px) {
-  .player-main { padding-block: 38px 52px; }
-  .player-heading { display: block; }
-  .player-heading p:last-child { margin-top: 18px; }
-  #unity-footer { min-height: 52px; padding-left: 14px; }
-}
+body { padding: 0; margin: 0 }
+#unity-container { position: absolute }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-mobile { position: fixed; width: 100%; height: 100% }
+#unity-canvas { background: #231F20 }
+.unity-mobile #unity-canvas { width: 100%; height: 100% }
+#unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
+#unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
+#unity-progress-bar-empty { width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-dark.png') no-repeat center }
+#unity-progress-bar-full { width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-dark.png') no-repeat center }
+#unity-footer { position: relative }
+.unity-mobile #unity-footer { display: none }
+#unity-logo-title-footer { float:left; width: 102px; height: 38px; background: url('unity-logo-title-footer.png') no-repeat center }
+#unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
+#unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
+#unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
