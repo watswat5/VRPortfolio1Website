@@ -88,3 +88,8 @@ h1{letter-spacing:-1.7px}
 .screenshot figcaption{color:var(--muted);font-size:12px;margin-top:10px}
 @media(max-width:640px){.project-hero{padding-block:48px 38px}.project-layout{grid-template-columns:1fr;gap:20px}
 }
+
+.card-image{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;margin-bottom:24px}
+.card .browser-link{margin-top:16px}
+.screenshot img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+.player-main .screenshot{max-width:640px;margin:0 0 28px}

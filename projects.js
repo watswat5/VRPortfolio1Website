@@ -1,9 +1,8 @@
-// Preferred build folders: portfolio1/demo1 ... demo4 and portfolio2/demo1 ... demo4.
-// Existing root demo1 ... demo8 folders also work (1–4 in Portfolio 1; 5–8 in Portfolio 2).
+// Portfolio 1 has four demos; Portfolio 2 has two.
 function projectSlot(path) {
   let match = /^portfolio([12])\/demo([1-4])\/index\.html$/.exec(path);
-  if (match) return { portfolio: Number(match[1]), project: Number(match[2]) };
-  match = /^demo([1-8])\/index\.html$/.exec(path);
+  if (match && (match[1] === '1' || Number(match[2]) <= 2)) return { portfolio: Number(match[1]), project: Number(match[2]) };
+  match = /^demo([1-6])\/index\.html$/.exec(path);
   if (!match) return null;
   const index = Number(match[1]) - 1;
   return { portfolio: Math.floor(index / 4) + 1, project: index % 4 + 1 };
@@ -22,6 +21,7 @@ async function discoverProjects() {
     for (const entry of projects) {
       const slot = projectSlot(entry.path);
       const card = document.querySelector(`[data-portfolio="${slot.portfolio}"][data-project="${slot.project}"]`);
+      if (!card) continue;
       const href = './' + entry.path.split('/').map(encodeURIComponent).join('/');
       // Only enable projects actually served here, avoiding links to an undeployed GitHub build.
       const published = await fetch(href, { method: 'HEAD', signal: AbortSignal.timeout(4000) });
@@ -39,7 +39,7 @@ async function discoverProjects() {
       link.href = href;
     }
     if (document.querySelector('[data-portfolio="2"].available')) {
-      document.querySelector('#portfolio2').parentElement.querySelector('p').textContent = 'Four projects · Explore the collection';
+      document.querySelector('#portfolio2').parentElement.querySelector('p').textContent = 'Two projects · VR, mixed reality & connected hardware';
     }
   } catch {
     document.getElementById('project-status').textContent = 'Showing the saved project list. New projects may appear when you refresh.';
