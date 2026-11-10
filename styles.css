@@ -93,3 +93,25 @@ h1{letter-spacing:-1.7px}
 .card .browser-link{margin-top:16px}
 .screenshot img{display:block;width:100%;height:auto;border:1px solid var(--line)}
 .player-main .screenshot{max-width:640px;margin:0 0 28px}
+
+/* Demo 7: concept and team. Portraits share one responsive square frame. */
+.troopers-page .project-hero{max-width:850px}
+.tracking-section{margin-top:48px;padding:36px;background:var(--navy);color:var(--white)}
+.tracking-section .eyebrow{color:#e9bba7;margin-bottom:16px}
+.tracking-section h2{font-size:28px}
+.tracking-intro{max-width:720px;color:#c1d0d5}
+.tracking-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;list-style:none;padding:24px 0 0;margin:24px 0 0;border-top:1px solid #49616b}
+.step-number{display:block;font-size:12px;letter-spacing:2px;color:#e9bba7;margin-bottom:20px}
+.tracking-steps h3{font-size:19px}
+.tracking-steps p{font-size:14px;color:#c1d0d5;margin-bottom:0}
+.team-section{margin-top:56px;padding-top:36px;border-top:1px solid var(--line);scroll-margin-top:28px}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.team-member{min-width:0;background:#eeefea;border:1px solid var(--line)}
+.team-portrait{display:block;width:100%;height:auto;aspect-ratio:1 / 1;object-fit:cover;object-position:center}
+.team-bio{padding:24px}
+.team-bio h3{font-size:21px}
+.team-bio p{font-size:14px;color:var(--muted)}
+.team-bio .member-meta{font-size:11px;color:var(--accent);line-height:1.6;margin:0 0 20px}
+.team-bio p:last-child{margin-bottom:0}
+@media(max-width:900px) and (min-width:641px){.team-grid{grid-template-columns:1fr;gap:22px}.team-member{display:grid;grid-template-columns:220px minmax(0,1fr)}.team-portrait{align-self:start}.team-bio{padding:24px}}
+@media(max-width:640px){.tracking-section{padding:26px 22px;margin-top:36px}.tracking-section h2{font-size:25px}.tracking-steps,.team-grid{grid-template-columns:1fr}.tracking-steps{gap:26px}.step-number{margin-bottom:12px}.team-section{margin-top:40px}.team-grid{gap:28px}}
