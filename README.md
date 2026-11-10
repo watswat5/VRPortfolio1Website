@@ -20,4 +20,4 @@ Navigation and project links are relative so the site can also run below a URL p
 
 No phone number or downloadable copy of the resume is included.
 
-Demos 5 and 6 have project pages at `demo5/` and `demo6/`. Demo 5 links to its hosted browser version. Video screenshots are stored in `images/`, with source URLs and timestamps in `images/README.md`. Demo 7 is a team concept page at `demo7/`, linked from the home page. It introduces VR Troopers, the proposed tracking approach, and three team members. Team portraits use consistent square crops. Tobias Seeanner’s bio is pending. Demo 8 is not part of the portfolio.
+Demos 5 and 6 have project pages at `demo5/` and `demo6/`. Demo 5 links to its hosted browser version. Video screenshots are stored in `images/`, with source URLs and timestamps in `images/README.md`. Demo 7 is a team concept page at `demo7/`, linked from the home page. It introduces VR Troopers, the proposed tracking approach, and three team members. Team portraits use consistent square crops. Demo 8 is not part of the portfolio.
